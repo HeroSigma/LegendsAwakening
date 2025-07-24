@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "right",
+      "map": "MAP_ROUTE19",
       "offset": -40,
-      "map": "MAP_ROUTE19"
+      "direction": "right"
     },
     {
-      "direction": "left",
+      "map": "MAP_CINNABAR_ISLAND",
       "offset": 0,
-      "map": "MAP_CINNABAR_ISLAND"
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -32,21 +32,36 @@
       "x": 60,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_SEAFOM_ISLANDS_1F",
-      "dest_warp_id": 0
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
+      "dest_warp_id": "0"
     },
     {
       "x": 72,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_SEAFOM_ISLANDS_1F",
-      "dest_warp_id": 1
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 64,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route20_EventScript_SeafoamIslandsSign"
+    },
+    {
+      "type": "sign",
+      "x": 68,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route20_EventScript_SeafoamIslandsSign"
+    }
   ]
 }

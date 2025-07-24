@@ -65,14 +65,14 @@
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
-#define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
-#define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F    (1 | (1 << 8))
+#define MAP_LITTLEROOT_TOWN_PLAYERS_HOUSE_1F     (0 | (1 << 8))
+#define MAP_LITTLEROOT_TOWN_PLAYERS_HOUSE_2F     (1 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F        (2 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (3 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
 
 // gMapGroup_IndoorOldale
-#define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
+#define MAP_OLDALE_TOWN_RIVALS_HOUSE      (0 | (2 << 8))
 #define MAP_OLDALE_TOWN_HOUSE2            (1 | (2 << 8))
 #define MAP_OLDALE_TOWN_POKEMON_CENTER_1F (2 | (2 << 8))
 #define MAP_OLDALE_TOWN_POKEMON_CENTER_2F (3 | (2 << 8))
@@ -128,7 +128,7 @@
 // gMapGroup_IndoorPetalburg
 #define MAP_PETALBURG_CITY_WALLYS_HOUSE      (0 | (8 << 8))
 #define MAP_PETALBURG_CITY_GYM               (1 | (8 << 8))
-#define MAP_PETALBURG_CITY_HOUSE1            (2 | (8 << 8))
+#define MAP_PETALBURG_CITY_PARENTS_HOUSE     (2 | (8 << 8))
 #define MAP_PETALBURG_CITY_HOUSE2            (3 | (8 << 8))
 #define MAP_PETALBURG_CITY_POKEMON_CENTER_1F (4 | (8 << 8))
 #define MAP_PETALBURG_CITY_POKEMON_CENTER_2F (5 | (8 << 8))
@@ -631,10 +631,10 @@
 #define MAP_ROUTE25                 (36 | (34 << 8))
 
 // gMapGroup_PalletTown
-#define MAP_PLAYERS_HOUSE_1F   (0 | (35 << 8))
-#define MAP_PLAYERS_HOUSE_2F   (1 | (35 << 8))
-#define MAP_GARYS_HOUSE        (2 | (35 << 8))
-#define MAP_PROFESSOR_OAKS_LAB (3 | (35 << 8))
+#define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (35 << 8))
+#define MAP_PALLET_TOWN_PLAYERS_HOUSE_2F   (1 | (35 << 8))
+#define MAP_PALLET_TOWN_LEAFS_HOUSE        (2 | (35 << 8))
+#define MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB (3 | (35 << 8))
 
 // gMapGroup_ViridianCity
 #define MAP_VIRIDIAN_CITY_HOUSE1            (0 | (36 << 8))
@@ -809,7 +809,7 @@
 #define MAP_ROCK_TUNNEL_1F                      (13 | (46 << 8))
 #define MAP_ROCK_TUNNEL_B1F                     (14 | (46 << 8))
 #define MAP_POWER_PLANT                         (15 | (46 << 8))
-#define MAP_SEAFOM_ISLANDS_1F                   (16 | (46 << 8))
+#define MAP_SEAFOAM_ISLANDS_1F                  (16 | (46 << 8))
 #define MAP_SEAFOAM_ISLANDS_B1F                 (17 | (46 << 8))
 #define MAP_SEAFOAM_ISLANDS_B2F                 (18 | (46 << 8))
 #define MAP_SEAFOAM_ISLANDS_B3F                 (19 | (46 << 8))
@@ -976,7 +976,7 @@
 
 // gMapGroup_SeviiDungeons
 #define MAP_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA          (0 | (69 << 8))
-#define MAP_MT_EMBER_SUMMY_PATH_1F                    (1 | (69 << 8))
+#define MAP_MT_EMBER_SUMMIT_PATH_1F                   (1 | (69 << 8))
 #define MAP_MT_EMBER_SUMMIT_PATH_2F                   (2 | (69 << 8))
 #define MAP_MT_EMBER_SUMMIT_PATH_3F                   (3 | (69 << 8))
 #define MAP_MT_EMBER_SUMMIT                           (4 | (69 << 8))
@@ -1011,7 +1011,7 @@
 #define MAP_FIVE_ISLAND_LOST_CAVE_ROOM14              (33 | (69 << 8))
 #define MAP_SIX_ISLAND_PATTERN_BUSH                   (34 | (69 << 8))
 #define MAP_SIX_ISLAND_ALTERING_CAVE                  (35 | (69 << 8))
-#define MAP_NEW_MAP2                                  (36 | (69 << 8))
+#define MAP_SIX_ISLAND_DOTTED_HOLE_ENTRANCE           (36 | (69 << 8))
 #define MAP_SIX_ISLAND_DOTTED_HOLE_B1F                (37 | (69 << 8))
 #define MAP_SIX_ISLAND_DOTTED_HOLE_B2F                (38 | (69 << 8))
 #define MAP_SIX_ISLAND_DOTTED_HOLE_B3F                (39 | (69 << 8))
@@ -1105,7 +1105,7 @@
 #define MAP_GOLDENROD_CITY_UNDERGROUND_SOUTH_ENTRANCE (1 | (75 << 8))
 #define MAP_GOLDENROD_CITY_UNDERGROUND                (2 | (75 << 8))
 #define MAP_GOLDENROD_CITY_UNDERGROUND_B1F            (3 | (75 << 8))
-#define MAP_GOLDEN_CITY_UNDERGROUND_WAREHOUSE         (4 | (75 << 8))
+#define MAP_GOLDENROD_CITY_UNDERGROUND_WAREHOUSE      (4 | (75 << 8))
 #define MAP_GOLDENROD_CITY_GYM                        (5 | (75 << 8))
 #define MAP_GOLDENROD_CITY_FLOWER_SHOP                (6 | (75 << 8))
 #define MAP_GOLDENROD_CITY_NAME_RATERS_HOUSE          (7 | (75 << 8))

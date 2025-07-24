@@ -390,8 +390,8 @@ gStdScripts_End::
     .include "data/maps/FuchsiaCity_PokemonCenter_2F/scripts.inc"
     .include "data/maps/FuchsiaCity_SafariZone_Entrance/scripts.inc"
     .include "data/maps/FuchsiaCity_ZooBuilding/scripts.inc"
-    .include "data/maps/GarysHouse/scripts.inc"
-    .include "data/maps/GoldenCity_Underground_Warehouse/scripts.inc"
+    .include "data/maps/PalletTown_LeafsHouse/scripts.inc"
+    .include "data/maps/GoldenrodCity_Underground_Warehouse/scripts.inc"
     .include "data/maps/GoldenrodCity/scripts.inc"
     .include "data/maps/GoldenrodCity_BikeShop/scripts.inc"
     .include "data/maps/GoldenrodCity_BillsFamilysHouse/scripts.inc"
@@ -500,8 +500,8 @@ gStdScripts_End::
     .include "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.inc"
     .include "data/maps/LilycoveCity_UnusedMart/scripts.inc"
     .include "data/maps/LittlerootTown/scripts.inc"
-    .include "data/maps/LittlerootTown_BrendansHouse_1F/scripts.inc"
-    .include "data/maps/LittlerootTown_BrendansHouse_2F/scripts.inc"
+    .include "data/maps/LittlerootTown_PlayersHouse_1F/scripts.inc"
+    .include "data/maps/LittlerootTown_PlayersHouse_2F/scripts.inc"
     .include "data/maps/LittlerootTown_MaysHouse_1F/scripts.inc"
     .include "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc"
     .include "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc"
@@ -573,7 +573,7 @@ gStdScripts_End::
     .include "data/maps/MtEmber_Summit/scripts.inc"
     .include "data/maps/MtEmber_SummitPath_2F/scripts.inc"
     .include "data/maps/MtEmber_SummitPath_3F/scripts.inc"
-    .include "data/maps/MtEmber_SummyPath_1F/scripts.inc"
+    .include "data/maps/MtEmber_SummitPath_1F/scripts.inc"
     .include "data/maps/MtMoon_1F/scripts.inc"
     .include "data/maps/MtMoon_B1F/scripts.inc"
     .include "data/maps/MtMoon_B2F/scripts.inc"
@@ -626,11 +626,11 @@ gStdScripts_End::
     .include "data/maps/NewBarkTown_PlayersHouse_2F/scripts.inc"
     .include "data/maps/NewBarkTown_ProfessorElmsLab/scripts.inc"
     .include "data/maps/CinnabarIsland/scripts.inc"
-    .include "data/maps/NewMap2/scripts.inc"
+    .include "data/maps/SixIsland_DottedHole_Entrance/scripts.inc"
     .include "data/maps/NewMauville_Entrance/scripts.inc"
     .include "data/maps/NewMauville_Inside/scripts.inc"
     .include "data/maps/OldaleTown/scripts.inc"
-    .include "data/maps/OldaleTown_House1/scripts.inc"
+    .include "data/maps/OldaleTown_RivalsHouse/scripts.inc"
     .include "data/maps/OldaleTown_House2/scripts.inc"
     .include "data/maps/OldaleTown_Mart/scripts.inc"
     .include "data/maps/OldaleTown_PokemonCenter_1F/scripts.inc"
@@ -671,7 +671,7 @@ gStdScripts_End::
     .include "data/maps/PalletTown/scripts.inc"
     .include "data/maps/PetalburgCity/scripts.inc"
     .include "data/maps/PetalburgCity_Gym/scripts.inc"
-    .include "data/maps/PetalburgCity_House1/scripts.inc"
+    .include "data/maps/PetalburgCity_ParentsHouse/scripts.inc"
     .include "data/maps/PetalburgCity_House2/scripts.inc"
     .include "data/maps/PetalburgCity_Mart/scripts.inc"
     .include "data/maps/PetalburgCity_PokemonCenter_1F/scripts.inc"
@@ -687,8 +687,8 @@ gStdScripts_End::
     .include "data/maps/PewterCity_Museum_2F/scripts.inc"
     .include "data/maps/PewterCity_PokemonCenter_1F/scripts.inc"
     .include "data/maps/PewterCity_PokemonCenter_2F/scripts.inc"
-    .include "data/maps/PlayersHouse_1F/scripts.inc"
-    .include "data/maps/PlayersHouse_2F/scripts.inc"
+    .include "data/maps/PalletTown_PlayersHouse_1F/scripts.inc"
+    .include "data/maps/PalletTown_PlayersHouse_2F/scripts.inc"
     .include "data/maps/PokemonLab_Entrance/scripts.inc"
     .include "data/maps/PokemonLab_ExperimentRoom/scripts.inc"
     .include "data/maps/PokemonLab_Lounge/scripts.inc"
@@ -706,7 +706,7 @@ gStdScripts_End::
     .include "data/maps/PokemonTower_6F/scripts.inc"
     .include "data/maps/PokemonTower_7F/scripts.inc"
     .include "data/maps/PowerPlant/scripts.inc"
-    .include "data/maps/ProfessorOaksLab/scripts.inc"
+    .include "data/maps/PalletTown_ProfessorOaksLab/scripts.inc"
     .include "data/maps/RecordCorner/scripts.inc"
     .include "data/maps/RocketHideout_B1F/scripts.inc"
     .include "data/maps/RocketHideout_B2F/scripts.inc"
@@ -943,7 +943,7 @@ gStdScripts_End::
     .include "data/maps/SeafoamIslands_B2F/scripts.inc"
     .include "data/maps/SeafoamIslands_B3F/scripts.inc"
     .include "data/maps/SeafoamIslands_B4F/scripts.inc"
-    .include "data/maps/SeafomIslands_1F/scripts.inc"
+    .include "data/maps/SeafoamIslands_1F/scripts.inc"
     .include "data/maps/SealedChamber_InnerRoom/scripts.inc"
     .include "data/maps/SealedChamber_OuterRoom/scripts.inc"
     .include "data/maps/SevenIsland/scripts.inc"
@@ -1330,11 +1330,11 @@ Common_EventScript_PlayGymBadgeFanfare::
 	return
 
 Common_EventScript_OutOfCenterPartyHeal::
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	return
 
 EventScript_RegionMap::

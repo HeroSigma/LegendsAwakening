@@ -1347,7 +1347,7 @@
 	@ The specified id can be used to refer to the sprite again later with turnvobject.
 	.macro createvobject graphicsId:req, id:req, x:req, y:req, elevation=3, direction=DIR_SOUTH
 	.byte 0xaa
-	.byte \graphicsId
+	.2byte \graphicsId
 	.byte \id
 	.2byte \x
 	.2byte \y
@@ -1676,9 +1676,11 @@
 
 	@ Equivalent to fadescreen but copies gPlttBufferUnfaded to gPaletteDecompressionBuffer on the fade out
 	@ and the reverse on the fade in, in effect saving gPlttBufferUnfaded to restore it.
-	.macro fadescreenswapbuffers mode:req
+  @ If nowait set, does not wait for the fade to complete
+	.macro fadescreenswapbuffers mode:req, nowait=0
 	.byte 0xdc
 	.byte \mode
+  .byte \nowait
 	.endm
 
 	@ Buffers the specified trainer's class name to the given string var.
@@ -1729,6 +1731,16 @@
 	.2byte \quantity
 	.endm
 
+	@ Like callnative, but function expects a ctx
+	.macro callfunc func:req
+	.byte 0xe3
+	.4byte \func
+	.endm
+
+	@ Checks the player's region. Stores the result (KANTO (0) or JOHTO (1) or HOENN (2)) in VAR_RESULT.
+	.macro checkplayerregion
+	.byte 0xe4
+	.endm
 
 @ Supplementary
 
