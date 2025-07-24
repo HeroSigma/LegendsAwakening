@@ -110,8 +110,18 @@ NewBarkTown_EventScript_ElmsHouseSign::
 	end
 
 NewBarkTown_EventScript_PlayersHouseSign::
-	msgbox NewBarkTown_Text_PlayersHouseSign, MSGBOX_SIGN
-	end
+        msgbox NewBarkTown_Text_PlayersHouseSign, MSGBOX_SIGN
+        end
+
+NewBarkTown_EventScript_TeleportLittleroot::
+        lockall
+        msgbox NewBarkTown_Text_TeleportLittleroot, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, NO, NewBarkTown_EventScript_TeleportEnd
+        warpteleport MAP_LITTLEROOT_TOWN, 3, 10
+        waitstate
+NewBarkTown_EventScript_TeleportEnd::
+        releaseall
+        end
 
 NewBarkTown_Text_YoureBack:
 	.string "MOM: {PLAYER}, you're back, honey!\p"
@@ -130,4 +140,7 @@ NewBarkTown_Text_ElmsHouseSign::
 	.string "PROF. ELM'S HOUSE$"
 
 NewBarkTown_Text_PlayersHouseSign::
-	.string "{PLAYER}'s HOUSE$"
+        .string "{PLAYER}'s HOUSE$"
+
+NewBarkTown_Text_TeleportLittleroot:
+        .string "Warp to LITTLEROOT TOWN?$"
