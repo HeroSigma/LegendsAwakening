@@ -377,10 +377,20 @@ u16 PlayerGenderToFrontTrainerPicId_Debug(u8 gender, bool8 getClass)
 {
     if (getClass == TRUE)
     {
-        if (gender != MALE)
-            return gFacilityClassToPicIndex[FACILITY_CLASS_MAY];
+        if (gSaveBlock2Ptr->playerRegion == HOENN)
+        {
+            if (gender != MALE)
+                return gFacilityClassToPicIndex[FACILITY_CLASS_RS_MAY];
+            else
+                return gFacilityClassToPicIndex[FACILITY_CLASS_RS_BRENDAN];
+        }
         else
-            return gFacilityClassToPicIndex[FACILITY_CLASS_BRENDAN];
+        {
+            if (gender != MALE)
+                return gFacilityClassToPicIndex[FACILITY_CLASS_MAY];
+            else
+                return gFacilityClassToPicIndex[FACILITY_CLASS_BRENDAN];
+        }
     }
     return gender;
 }
