@@ -159,10 +159,30 @@ LittlerootTown_EventScript_BrendansHouseSign::
 	end
 
 LittlerootTown_EventScript_MaysHouseSign::
-	lockall
-	msgbox LittlerootTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-	releaseall
-	end
+        lockall
+        msgbox LittlerootTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
+        releaseall
+        end
+
+LittlerootTown_EventScript_TeleportPallet::
+        lockall
+        msgbox LittlerootTown_Text_TeleportPallet, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, NO, LittlerootTown_EventScript_TeleportEnd
+        warpteleport MAP_PALLET_TOWN, 4, 9
+        waitstate
+LittlerootTown_EventScript_TeleportEnd::
+        releaseall
+        end
+
+LittlerootTown_EventScript_TeleportNewBark::
+        lockall
+        msgbox LittlerootTown_Text_TeleportNewBark, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, NO, LittlerootTown_EventScript_TeleportEnd2
+        warpteleport MAP_NEW_BARK_TOWN, 14, 9
+        waitstate
+LittlerootTown_EventScript_TeleportEnd2::
+        releaseall
+        end
 
 LittlerootTown_Text_YoureBack:
 	.string "MOM: {PLAYER}, you're back, honey!\p"
@@ -193,4 +213,10 @@ LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"
 
 LittlerootTown_Text_ProfBirchsHouse:
-	.string "PROF. BIRCH'S HOUSE$"
+        .string "PROF. BIRCH'S HOUSE$"
+
+LittlerootTown_Text_TeleportPallet:
+        .string "Warp to PALLET TOWN?$"
+
+LittlerootTown_Text_TeleportNewBark:
+        .string "Warp to NEW BARK TOWN?$"

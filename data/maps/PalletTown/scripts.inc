@@ -110,8 +110,18 @@ PalletTown_EventScript_OaksHouseSign::
 	end
 
 PalletTown_EventScript_TownSign::
-	msgbox PalletTown_Text_TownSign, MSGBOX_SIGN
-	end
+        msgbox PalletTown_Text_TownSign, MSGBOX_SIGN
+        end
+
+PalletTown_EventScript_TeleportLittleroot::
+        lockall
+        msgbox PalletTown_Text_TeleportLittleroot, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, NO, PalletTown_EventScript_TeleportEnd
+        warpteleport MAP_LITTLEROOT_TOWN, 3, 10
+        waitstate
+PalletTown_EventScript_TeleportEnd::
+        releaseall
+        end
 
 PalletTown_Text_YoureBack:
 	.string "MOM: {PLAYER}, you're back, honey!\p"
@@ -131,3 +141,6 @@ PalletTown_Text_OaksHouse::
 PalletTown_Text_TownSign::
     .string "PALLET TOWN\n"
     .string "Shades of your journey await!$"
+
+PalletTown_Text_TeleportLittleroot:
+    .string "Warp to LITTLEROOT TOWN?$"
