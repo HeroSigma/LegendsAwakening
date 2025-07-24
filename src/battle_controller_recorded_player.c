@@ -1686,7 +1686,7 @@ static void RecordedPlayerHandleIntroTrainerBallThrow(void)
             LoadCompressedPalette(gTrainerBackPicPaletteTable[gSaveBlock2Ptr->playerGender + TRAINER_BACK_PIC_GOLD].data, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
         }
         if(gSaveBlock2Ptr->playerRegion == HOENN) {
-            LoadCompressedPalette(gTrainerBackPicPaletteTable[gSaveBlock2Ptr->playerGender].data, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
+            LoadCompressedPalette(gTrainerBackPicPaletteTable[gSaveBlock2Ptr->playerGender + TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN].data, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
         }
 
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = paletteNum;
