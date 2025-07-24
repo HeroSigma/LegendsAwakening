@@ -13,8 +13,6 @@ MEMORY
 /* Modify the following load addresses as needed to make more room. Alternately, delete both the
    declarations below and their references further down to get rid of the gaps.                  */
 
-__anim_mon_load_address = 0x8b6d400;
-__gfx_load_address = 0x8c06000;
 
 SECTIONS {
 
@@ -1283,6 +1281,7 @@ SECTIONS {
         *libgcc.a:_udivdi3.o(.rodata);
         *libc.a:memcpy.o(.rodata);
         *libc.a:memset.o(.rodata);
+        *libc.a:*.o(.data*);
         *libc.a:strcmp.o(.rodata);
         *libc.a:strcpy.o(.rodata);
         *libc.a:impure.o(.rodata);
@@ -1329,13 +1328,13 @@ SECTIONS {
         data/multiboot_pokemon_colosseum.o(.rodata);
     } > ROM =0
 
-    anim_mon_front_pic_data __anim_mon_load_address :
+    anim_mon_front_pic_data :
     ALIGN(4)
     {
         src/anim_mon_front_pics.o(.rodata);
     } > ROM =0
 
-    gfx_data __gfx_load_address :
+    gfx_data :
     ALIGN(4)
     {
         src/graphics.o(.rodata);
@@ -1346,9 +1345,12 @@ SECTIONS {
     {
         src/*.o(.text);
         gflib/*.o(.text);
-        src/*.o(.rodata);
-        gflib/*.o(.rodata);
-        data/*.o(.rodata);
+        src/*.o(.rodata*);
+        gflib/*.o(.rodata*);
+        data/*.o(.rodata*);
+        src/*.o(.data*);
+        gflib/*.o(.data*);
+        data/*.o(.data*);
     } > ROM = 0
 
     /* DWARF debug sections.
